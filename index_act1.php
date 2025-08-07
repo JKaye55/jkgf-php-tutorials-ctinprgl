@@ -69,12 +69,8 @@ if (empty($_POST["email"])){
 
 <hr>
 <?php
-
+ include("connections.php");
 if ($name && $address && $email && $section && $contact){
- echo $name . "<br>";
-  echo $address . "<br>";
-   echo $email . "<br>";
-   echo $section . "<br>";
-   echo $contact . "<br>";
+ $query= mysqli_query($connections, "INSERT INTO mytbl (name,address,email_address,section,contact) VALUES ('$name', '$address', '$email' , '$section', '$contact')");
 }
 ?>
