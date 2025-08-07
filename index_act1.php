@@ -69,8 +69,43 @@ if (empty($_POST["email"])){
 
 <hr>
 <?php
- include("connections.php");
+include("connections.php");
 if ($name && $address && $email && $section && $contact){
  $query= mysqli_query($connections, "INSERT INTO mytbl (name,address,email_address,section,contact) VALUES ('$name', '$address', '$email' , '$section', '$contact')");
+ echo "<script language='javascript'>alert('New Record has been inserted!')</script>";
+ echo "<script>window.location.href='index.php';</script>";
 }
+
+ $view_query = mysqli_query($connections, "SELECT * FROM mytbl");
+
+echo "<table border='1' width='50%'>";
+echo "<tr>
+
+	<td>Name</td>
+	<td>Address</td>
+	<td>Email_Address</td>
+	<td>Section</td>
+	<td>Contact #:</td>
+	
+</tr>";
+while($row= mysqli_fetch_assoc($view_query)){
+
+$db_name=$row["name"];
+$db_address=$row["address"];
+$db_email=$row["email_address"];
+$db_section=$row["section"];
+$db_contact=$row["contact"];
+
+echo "<tr>
+
+	<td>$db_name</td>
+	<td>$db_address</td>
+	<td>$db_email</td>
+	<td>$db_section</td>
+	<td>$db_contact</td>
+	
+</tr>";
+
+}
+echo "</table>";
 ?>
