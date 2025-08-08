@@ -43,6 +43,20 @@ if (empty($_POST["email"])){
 	}
 </style>
 
+
+<br>
+
+<?php
+
+include("nav.php");
+
+
+
+?>
+
+<br>
+<br>
+
 <form method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
 
 
@@ -73,7 +87,7 @@ include("connections.php");
 if ($name && $address && $email && $section && $contact){
  $query= mysqli_query($connections, "INSERT INTO mytbl (name,address,email_address,section,contact) VALUES ('$name', '$address', '$email' , '$section', '$contact')");
  echo "<script language='javascript'>alert('New Record has been inserted!')</script>";
- echo "<script>window.location.href='index.php';</script>";
+ echo "<script>window.location.href='index_act1.php';</script>";
 }
 
  $view_query = mysqli_query($connections, "SELECT * FROM mytbl");
@@ -111,7 +125,7 @@ echo "<tr>
 	<td>
 	
 	<a href='edit.php?id=$user_id'>Update</a>&nbsp;
-	<a href=''>Delete</a>
+	<a href='confirmdelete.php?id=$user_id'>Delete</a>
 	</td>
 	
 	</td>
@@ -120,4 +134,20 @@ echo "<tr>
 
 }
 echo "</table>";
+?>
+
+<hr>
+
+<?php
+$Paul="Paul";
+$Mica="Mica";
+$Kaye="Kaye";
+
+$names=array("$Kaye","$Paul","$Mica");
+
+foreach($names as $display_names){
+
+	echo $display_names . "<br>";
+
+}
 ?>

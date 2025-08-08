@@ -1,0 +1,1 @@
+<a href="index_act1.php">Home</a> &nbsp; <a href="search.php">Search</a>
