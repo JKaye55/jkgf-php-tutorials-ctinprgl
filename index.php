@@ -31,6 +31,19 @@ if (empty($_POST["email"])){
 	}
 </style>
 
+<br>
+
+<?php
+
+include("nav.php");
+
+
+
+?>
+
+<br>
+<br>
+
 <form method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
 
 
@@ -87,11 +100,27 @@ echo "<tr>
 	<td>
 
 	<a href='edit.php?id=$user_id'>Update</a>&nbsp;
-	<a href=''>Delete</a>
+	<a href='confirmdelete.php?id=$user_id'>Delete</a>
 	</td>
 	
 </tr>";
 
 }
 echo "</table>";
+?>
+
+<hr>
+
+<?php
+$Paul="Paul";
+$Mica="Mica";
+$Kaye="Kaye";
+
+$names=array("$Kaye","$Paul","$Mica");
+
+foreach($names as $display_names){
+
+	echo $display_names . "<br>";
+
+}
 ?>
