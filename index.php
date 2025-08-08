@@ -67,10 +67,13 @@ echo "<tr>
 	<td>Name</td>
 	<td>Address</td>
 	<td>Email</td>
+
+	<td>Option</td>
 	
 </tr>";
 while($row= mysqli_fetch_assoc($view_query)){
 
+$user_id=$row["id"];	
 $db_name=$row["name"];
 $db_address=$row["address"];
 $db_email=$row["email"];
@@ -80,6 +83,12 @@ echo "<tr>
 	<td>$db_name</td>
 	<td>$db_address</td>
 	<td>$db_email</td>
+
+	<td>
+
+	<a href='edit.php?id=$user_id'>Update</a>&nbsp;
+	<a href=''>Delete</a>
+	</td>
 	
 </tr>";
 
