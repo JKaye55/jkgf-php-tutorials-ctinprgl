@@ -19,7 +19,7 @@ foreach($terms as $each){
 }
 
 $query=mysqli_query($connections, $q);
-$c_q= mysqli_num_rows($query);
+$c_q=mysqli_num_rows($query);
 
 if ($c_q > 0 && $check!=""){
 

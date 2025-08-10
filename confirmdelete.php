@@ -16,7 +16,6 @@ $db_email=$row_delete["email_address"];
 $db_section=$row_delete["section"];
 $db_contact=$row_delete["contact"];
 
-
 }
 
 echo "<h1> Are you sure you want to delete $db_name ?</h1>";

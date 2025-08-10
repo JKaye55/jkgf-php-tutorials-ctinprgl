@@ -16,6 +16,7 @@ $db_email=$row_edit["email_address"];
 $db_section=$row_edit["section"];
 $db_contact=$row_edit["contact"];
 
+
 }
 ?>
 
@@ -32,6 +33,7 @@ $db_contact=$row_edit["contact"];
 <input type="text" name="new_section" value="<?php echo $db_section;?>"> <br>
 
 <input type="text" name="new_contact" value="<?php echo $db_contact;?>"> <br> 
+
 <input type="submit" value="Update">
 
 </form>

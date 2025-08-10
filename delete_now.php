@@ -1,7 +1,5 @@
 <?php
 
-
-
 include("connections.php");
 $user_id=$_POST["user_id"];
 
