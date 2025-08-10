@@ -53,7 +53,7 @@ $emailErr="Email is already registered!";
 
 }
 
-$query= mysqli_query($connections, "INSERT INTO mytbl (name,address,email, password, account_type) VALUES ('$name', '$address', '$email', '$cpassword', '2')");
+$query= mysqli_query($connections, "INSERT INTO mytbl (name,address,email,password,account_type) VALUES ('$name', '$address', '$email', '$cpassword', '2')");
 echo "<script language='javascript'>alert('New Record has been inserted!')</script>";
 echo "<script>window.location.href='index.php';</script>";
 
